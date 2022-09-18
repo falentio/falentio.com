@@ -2,12 +2,12 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	const prjoectsJson = import.meta.glob('/projects/**.json', { eager: true, as: 'json' }) as {
 		[k: string]: {
-			name: string; 
+			name: string;
 			date: string;
-			description: string; 
-			repository: string; 
-			site: string; 
-			previewImg: string; 
+			description: string;
+			repository: string;
+			site: string;
+			previewImg: string;
 		};
 	};
 	const projects = Object.values(prjoectsJson).sort(
