@@ -1,31 +1,31 @@
-import { writable } from "svelte/store"
-import { browser } from "$app/environment"
+import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 
-export const theme = writable<string | null>()
+export const theme = writable<string | null>();
 export function switchTheme() {
-	theme.update(t => {
-		if (t === "dark") {
-			return "light"
+	theme.update((t) => {
+		if (t === 'dark') {
+			return 'light';
 		} else {
-			return "dark"
+			return 'dark';
 		}
-	})
+	});
 }
 
 if (browser) {
-	const t = localStorage.getItem("theme") ?? defaultTheme()
-	theme.set(t)
-	theme.subscribe(t => {
-		document.body.classList.toggle("dark", t === "dark")
-		localStorage.setItem("theme", t)
-	})
+	const t = localStorage.getItem('theme') ?? defaultTheme();
+	theme.set(t);
+	theme.subscribe((t) => {
+		document.body.classList.toggle('dark', t === 'dark');
+		localStorage.setItem('theme', t);
+	});
 }
 
 function defaultTheme() {
-	const dark = window.matchMedia("(prefers-color-scheme: dark)").matches
+	const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	if (dark) {
-		return "dark"
+		return 'dark';
 	} else {
-		return "light"
+		return 'light';
 	}
 }

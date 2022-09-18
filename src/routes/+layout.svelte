@@ -1,13 +1,13 @@
 <script>
-	import "../app.css";
-	import "@fontsource/abel/400.css"
-	import "$lib/theme/theme"
-	import Navbar from "$lib/components/Navbar.svelte"
-	import Footer from "$lib/components/Footer.svelte"
-	import { browser } from "$app/environment"
+	import '../app.css';
+	import '@fontsource/abel/400.css';
+	import '$lib/theme/theme';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import { browser } from '$app/environment';
 </script>
 
-<div 
+<div
 	class="font-abel h-full min-h-screen flex flex-col md:flex-row mx-auto bg-gray-50 text-zinc-800 dark:bg-slate-900 dark:text-zinc-400 overflow-auto"
 	class:invisible={!browser}
 >
