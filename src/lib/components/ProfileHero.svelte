@@ -5,6 +5,7 @@
 		<img
 			alt="profile"
 			src="//github.com/falentio.png"
+			loading="lazy"
 			height="200"
 			width="200"
 			class="rounded-full object-cover mx-auto ring-2 ring-black dark:ring-zinc-700"

@@ -15,6 +15,7 @@
 		<img
 			src={image}
 			alt="{name} preview"
+			loading="lazy"
 			width="400"
 			height="200"
 			class="object-cover block h-full"
