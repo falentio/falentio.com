@@ -2,7 +2,7 @@
 	import NavbarItem from '$lib/components/NavbarItem.svelte';
 	import ThemeSwitchButton from '$lib/components/ThemeSwitchButton.svelte';
 
-	const icons = [
+	const icons: string[][] = [
 		['home', 'carbon:home', '/'],
 		['projects', 'carbon:code', '/projects']
 		// ["blog", "carbon:license-draft", "/blog"],

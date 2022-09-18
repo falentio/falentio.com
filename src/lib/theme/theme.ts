@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-export const theme = writable<string | null>();
+export const theme = writable<string | null>(null);
 export function switchTheme() {
 	theme.update((t) => {
 		if (t === 'dark') {
@@ -17,7 +17,9 @@ if (browser) {
 	theme.set(t);
 	theme.subscribe((t) => {
 		document.body.classList.toggle('dark', t === 'dark');
-		localStorage.setItem('theme', t);
+		if (t) {
+			localStorage.setItem('theme', t);
+		}
 	});
 }
 

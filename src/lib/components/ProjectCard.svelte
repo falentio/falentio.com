@@ -12,7 +12,13 @@
 	class="shadow-sm grid grid-cols-5 bg-gray-50 dark:bg-slate-900 ring-1 ring-black dark:ring-zinc-700"
 >
 	<div class="col-span-2 h-20 w-full overflow-hidden">
-		<img src={image} width="400" height="200" class="object-cover block h-full" />
+		<img
+			src={image}
+			alt="{name} preview"
+			width="400"
+			height="200"
+			class="object-cover block h-full"
+		/>
 	</div>
 	<div class="col-span-3 px-2 flex flex-col">
 		<h2 class="text-xl">{name}</h2>

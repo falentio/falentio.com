@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 	import '@fontsource/abel/400.css';
 	import '$lib/theme/theme';

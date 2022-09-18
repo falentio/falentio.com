@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 
-	const social = [
+	const social: string[][] = [
 		// ["mdi:github", "https://github.com/falentio", "github"],
 	];
 </script>
