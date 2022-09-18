@@ -1,0 +1,8 @@
+{
+	"name": "catsum",
+	"date": "2022-09-18",
+	"description": "Some random cats images",
+	"site": "https://catsum.deno.dev",
+	"repository": "https://github.com/falentio/catsum",
+	"previewImg": "catsum.jpg"
+}
