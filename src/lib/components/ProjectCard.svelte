@@ -6,12 +6,16 @@
 	export let site: string;
 	export let previewImg: string;
 	const image = `/project-preview-images/${previewImg}`;
+	$: href = site || repository || "#"
 </script>
 
 <section
 	class="shadow-sm grid grid-cols-5 bg-gray-50 dark:bg-slate-900 ring-1 ring-black dark:ring-zinc-700"
 >
-	<div class="col-span-2 h-20 w-full overflow-hidden">
+	<a 
+		{href}
+		class="col-span-2 h-20 w-full overflow-hidden"
+	>
 		<img
 			src={image}
 			alt="{name} preview"
@@ -20,9 +24,11 @@
 			height="200"
 			class="object-cover block h-full"
 		/>
-	</div>
+	</a>
 	<div class="col-span-3 px-2 flex flex-col">
-		<h2 class="text-xl">{name}</h2>
+		<h2 class="text-xl capitalize">
+			<a {href}>{name}</a>
+		</h2>
 		<span class="truncate text-sm"> {description} </span>
 		<div class="flex-auto" />
 		<div class="w-max ml-auto grid grid-rows-1 auto-cols-max grid-flow-col text-sm">
