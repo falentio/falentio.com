@@ -8,7 +8,7 @@
 	$: current = $page.url.pathname === href;
 </script>
 
-<li
+<div
 	class="h-max w-12 mx-2 text-center md:my-2 transition-transform ease-in-out duration-300"
 	class:text-sky-500={current}
 	class:scale-110={current}
@@ -17,4 +17,4 @@
 		<Icon {icon} class="h-8 w-8 mx-auto" />
 		<span> {text} </span>
 	</a>
-</li>
+</div>
